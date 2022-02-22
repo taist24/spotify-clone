@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .font-poppins {
+    font-family: "Poppins", sans-serif;
+  }
+
+  .home-layout {
+    display: grid;
+    grid-template-areas: "sidebar main-view buddy-feed" "now-playing-bar now-playing-bar now-playing-bar";
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr auto;
+  }
+
+  .sidebar {
+    grid-area: sidebar;
+  }
+
+  .main-view {
+    grid-area: main-view;
+  }
+
+  .now-playing-bar {
+    background-color: #181818;
+    grid-area: now-playing-bar;
+    z-index: 4;
+    width: 100%;
+  }
+}
